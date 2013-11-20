@@ -1,0 +1,22 @@
+.actions {
+	width: 100%;
+	height: 50px;
+	background: #333;
+}
+
+.actions > * {
+	height: 70%;
+	float: left;
+}
+
+.actions #share {
+	width: 14%;
+}
+
+.actions #message {
+	width: 50%;
+}
+
+.actions #ok {
+	width: 14%;
+}
