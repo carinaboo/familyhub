@@ -53,7 +53,7 @@
 }
 
 .sent .message.ok {
-	width: 130px;
+	width: 130px; /* whatever width you change here, please change it on ".sent img.ok-img" width as well*/
 	height: 130px;
 }
 
@@ -63,6 +63,6 @@
 }
 
 .sent img.ok-img {
-	width: 130px;
+	width: 130px; /* whatever width you change here, please change it on ".sent .message.ok" width as well*/
 	margin: 0 auto;
 }
