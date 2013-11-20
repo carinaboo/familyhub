@@ -52,7 +52,17 @@
 	float: right;
 }
 
+.sent .message.ok {
+	width: 130px;
+	height: 130px;
+}
+
 .sent .triangle {
 	float: right;
     border-color: transparent transparent transparent #a5f3c5;
+}
+
+.sent img.ok-img {
+	width: 130px;
+	margin: 0 auto;
 }
