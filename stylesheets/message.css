@@ -21,6 +21,10 @@
 	border-radius: 5px;
 }
 
+.sent .face {
+	display: none;
+}
+
 .triangle {
 	width: 0;
     height: 0;

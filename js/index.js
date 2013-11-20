@@ -12,6 +12,10 @@ $(document).ready(function(){
 		window.scrollTo(0,document.body.scrollHeight);
 	})
 
+	$("#options").click(function(){ // using this button to swap user from Mom/Jimmy for now
+		swapUser();
+	})
+
 	$("#message").keypress(function(){
 		changeOkButton();
 	})
@@ -19,6 +23,7 @@ $(document).ready(function(){
 
 function sendText(msg) {
 	var html = "<div class='row sent'> \
+					<div class='face'><img src='images/no-face.jpg'></div> \
     				<div class='triangle'></div> \
     				<div class='message'>" + msg + "</div> \
     			</div>"
@@ -28,6 +33,7 @@ function sendText(msg) {
 function sendOk() {
 	var imgHTML = "<img class='ok-img' src='images/ok.gif'>";
 	var html = "<div class='row sent'> \
+					<div class='face'><img src='images/no-face.jpg'></div> \
     				<div class='triangle'></div> \
     				<div class='message ok'>" + imgHTML + "</div> \
     			</div>"
@@ -42,4 +48,42 @@ function changeOkButton() {
 	} else {
 		$("#ok").css('background-image', 'url("images/ok.gif")'); // I CANT GET URL WORKING HALP
 	}
+}
+
+var userIsChild = false;
+
+function swapUser() {
+	if (userIsChild) {
+		userMom();
+		userIsChild = false;
+	} else {
+		userChild();
+		userIsChild = true;
+	}
+}
+
+function userMom() {
+	$('#name').html("Jimmy");
+	$('.message-rows .row').each(function() {
+		if ($(this).hasClass('sent')) {
+			$(this).removeClass('sent');
+			$(this).addClass('received');
+		} else {
+			$(this).removeClass('received');
+			$(this).addClass('sent');
+		}
+	});
+}
+
+function userChild() {
+	$('#name').html("Mom");
+	$('.message-rows .row').each(function() {
+		if ($(this).hasClass('sent')) {
+			$(this).removeClass('sent');
+			$(this).addClass('received');
+		} else {
+			$(this).removeClass('received');
+			$(this).addClass('sent');
+		}
+	});
 }
