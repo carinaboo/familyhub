@@ -10,9 +10,18 @@
 }
 
 .actions #share {
-	width: 15%;
+	width: 45px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.actions #message {
+	width: 150px;
 }
 
 .actions #ok {
-	width: 15%;
+	width: 45px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-image: url('image/ok.gif');
 }
