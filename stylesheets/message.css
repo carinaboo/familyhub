@@ -38,6 +38,15 @@
     border-color: transparent #a5d3f3 transparent transparent;
 }
 
+.received .face {
+	float: left;
+}
+
+.face img {
+	height: 30px;
+	width: 30px;
+}
+
 .sent .message {
 	background-color: #a5f3c5;
 	float: right;
