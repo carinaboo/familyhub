@@ -13,6 +13,10 @@
 	width: 45px;
 	margin-left: 5px;
 	margin-right: 5px;
+	background-image: url("../images/share.png");
+	background-size: auto 25px;
+	background-repeat: no-repeat;
+	background-position:center;
 }
 
 .actions #message {
@@ -23,5 +27,8 @@
 	width: 45px;
 	margin-left: 5px;
 	margin-right: 5px;
-	background-image: url('image/ok.gif');
+	background-image: url("../images/ok.gif");
+	background-size: auto 25px;
+	background-repeat: no-repeat;
+	background-position:center;
 }
