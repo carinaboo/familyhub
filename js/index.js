@@ -38,8 +38,8 @@ function sendOk() {
 
 function changeOkButton() {
 	if ( $("#message").val() ) {
-		$("#ok").css("background-image", "none"); // CARINA PUT URL FOR TEXT "SEND" HERE PLZ
+		$("#ok").css('background-image', 'url("images/send.png")'); // CARINA PUT URL FOR TEXT "SEND" HERE PLZ
 	} else {
-		$("#ok").css("background-image", 'url("images/ok.gif")'); // I CANT GET URL WORKING HALP
+		$("#ok").css('background-image', 'url("images/ok.gif")'); // I CANT GET URL WORKING HALP
 	}
 }
