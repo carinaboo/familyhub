@@ -1,6 +1,11 @@
 $(document).ready(function(){
-	sendText("OK MOM");
-	sendOk();
+	$("#ok").click(function(){
+		if ($("#message").val()) {
+			sendText( $("#message").val() )
+		} else {
+			sendOk();
+		}
+	})
 })
 
 function sendText(msg) {
@@ -14,3 +19,4 @@ function sendOk() {
 	var imgHTML = "<img src='images/ok.gif'>";
 	sendText(imgHTML);
 }
+
