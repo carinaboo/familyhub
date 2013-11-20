@@ -1,0 +1,49 @@
+
+.row {
+	overflow: auto;
+}
+
+.row.received {
+	margin-left: -10px;
+}
+
+.row.sent {
+	margin-right: -10px;
+}
+
+.message {
+	display: inline-block;
+	max-width: 70%;
+	margin-bottom: 20px;
+	text-shadow: none;
+	font-size: 12px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.triangle {
+	width: 0;
+    height: 0;
+    border: solid 8px;
+    margin-top: 8px;
+}
+
+.received .message {
+	float: left;
+	background-color: #a5d3f3;
+}
+
+.received .triangle {
+	float: left;
+    border-color: transparent #a5d3f3 transparent transparent;
+}
+
+.sent .message {
+	background-color: #a5f3c5;
+	float: right;
+}
+
+.sent .triangle {
+	float: right;
+    border-color: transparent transparent transparent #a5f3c5;
+}
