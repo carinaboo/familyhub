@@ -5,18 +5,23 @@
 }
 
 .actions > * {
-	height: 70%;
+	height: 68%;
 	float: left;
 }
 
 .actions #share {
-	width: 14%;
+	width: 45px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .actions #message {
-	width: 50%;
+	width: 150px;
 }
 
 .actions #ok {
-	width: 14%;
+	width: 45px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-image: url('image/ok.gif');
 }
