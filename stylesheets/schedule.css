@@ -1,0 +1,76 @@
+body, .ui-page {
+	/*background: white !important;*/
+}
+
+.ui-content {
+	height: 100vh;
+	padding: 0;
+}
+
+#footer {
+	height: 45px;
+	background-color: white;
+	background-image: none;
+	color: black;
+	/*border-top: 1px solid black;*/
+	text-shadow: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#footer .note {
+	float: left;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+#footer .call {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	display: none;
+}
+
+#left-col {
+	float: left;
+	height: 100%;
+	width: 20%;
+}
+
+#left-col .time {
+	margin-top: 10px;
+	height: 65px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#right-col {
+	float: left;
+	height: 100%;
+	width: 80%;
+	padding-top: 20px;
+}
+
+#right-col .item{
+	height: 64px;
+	padding-top: 10px;
+	padding-left: 10px;
+	border-top: 1px solid #858585;
+	text-shadow: none;
+}
+
+.item.taken {
+	background-color: #ffeaed;
+}
+
+.item.schedule {
+	background-color: #d3d3d3;
+}
+
+.item.schedule span {
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+	margin-bottom: 5px;
+}
