@@ -1,0 +1,19 @@
+body {
+	background-color: #333333;
+	text-align: center;
+}
+
+.time {
+	font-size: 52px;
+	color: white;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.notification {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	display: inline-block;
+}
