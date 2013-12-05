@@ -30,7 +30,20 @@ $(document).ready(function(){
 		}	
 	})
 
+	$("#request-call").click(function(){
+		requestCall();
+	})
+
 })
+
+function requestCall() {
+	var html = "<div class='row sent callrequest'> \
+					<div class='face'><img src='images/no-face.jpg'></div> \
+    				<div class='triangle'></div> \
+    				<div class='message'>You've requested a call</div> \
+    			</div>"
+	$(html).hide().appendTo(".message-rows").show();
+}
 
 function sendText(msg) {
 	var html = "<div class='row sent'> \
