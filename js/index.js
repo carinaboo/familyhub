@@ -12,13 +12,24 @@ $(document).ready(function(){
 		window.scrollTo(0,document.body.scrollHeight);
 	})
 
-	$("#options").click(function(){ // using this button to swap user from Mom/Jimmy for now
+	$("#name").click(function(){ // using name to swap user from Mom/Jimmy for now
 		swapUser();
 	})
 
 	$("#message").keypress(function(){
 		changeOkButton();
 	})
+
+	var panelOpen = false;
+
+	$("#options").click(function(){
+		if (panelOpen == false) {
+			$("#options-panel").panel( "open" );
+		} else {
+			$("#options-panel").panel( "close" );
+		}	
+	})
+
 })
 
 function sendText(msg) {
@@ -44,13 +55,13 @@ function sendOk() {
 
 function changeOkButton() {
 	if ( $("#message").val() ) {
-		$("#ok").css('background-image', 'url("images/send.png")'); // CARINA PUT URL FOR TEXT "SEND" HERE PLZ
+		$("#ok").css('background-image', 'url("images/send.png")');
 	} else {
-		$("#ok").css('background-image', 'url("images/ok.gif")'); // I CANT GET URL WORKING HALP
+		$("#ok").css('background-image', 'url("images/ok.gif")'); 
 	}
 }
 
-var userIsChild = false;
+var userIsChild = true;
 
 function swapUser() {
 	if (userIsChild) {

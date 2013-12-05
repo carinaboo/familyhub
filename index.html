@@ -11,8 +11,29 @@
 </head>
 <body>
 	<div data-role="page" data-add-back-btn="true" class="app">
+		
+		<!-- right panel -->
+		<div data-role="panel" id="options-panel" data-position="right" data-display="reveal" data-dismissible="true">
+			<div class="profile">
+				<div class="profile-img"></div>
+				<div class="name">Jimmy</div>
+			</div>
+			<div class="status busy">Busy: In Class</div>
+			<div class="free-at">Free at 5:30pm</div>
+			<div class="request-actions">
+				<a href="" data-role="button" data-icon="grid">Call Now</a>
+				<a href="" data-role="button" data-icon="grid">Request Call</a>
+				<a href="" data-role="button" data-icon="grid">Request Photo</a>
+			</div>
+			<div data-role="controlgroup"  data-type="horizontal" data-mini="true">
+				<a href="index.html" data-role="button" data-icon="camera">Photos</a>
+				<a href="index.html" data-role="button" data-icon="stitch">Stitches</a>
+				<a href="index.html" data-role="button" data-icon="note">Notes</a>
+			</div>
+    	</div>
+
 		<div data-role="header" data-position="fixed">
-			<h1 id="name">Jimmy</h1>
+			<h1 id="name">Mom</h1>
 			<a href="#" data-icon="bars" class="ui-btn-right" data-iconpos="notext" id="options"></a>
 		</div>
 		<div data-role="content">
@@ -28,13 +49,13 @@
     				<div class="message">Did you get home safely? Reply back soon okay?</div>
     			</div>
         	</div>
-			<div data-position="fixed" class="actions">
-				<a href="#" data-role="button" data-iconpos="notext" data-theme="a" id="share"></a>
-				<input type="text" name="message" value="" id="message">
-    			<a href="#" data-role="button" data-iconpos="notext" data-theme="a" id="ok"></a>
-			</div>
 		</div>
+		<div data-role="footer" data-position="fixed" class="actions">
+			<a href="#" data-role="button" data-iconpos="notext" data-theme="a" id="share"></a>
+			<input type="text" name="message" value="" id="message">
+			<a href="#" data-role="button" data-iconpos="notext" data-theme="a" id="ok"></a>
+		</div>
+
 	</div>
 </body>
 </html> 
-
