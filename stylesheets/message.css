@@ -1,3 +1,8 @@
+body, .ui-page, .ui-body-c {
+	background-color: none !important;
+	background-image:url('../images/geometry.png');
+	background-repeat:repeat;
+}
 
 .row {
 	overflow: auto;
@@ -52,7 +57,7 @@
 }
 
 .sent .message {
-	background-color: #a5f3c5;
+	background-color: #f3eca5;
 	float: right;
 }
 
@@ -63,10 +68,14 @@
 
 .sent .triangle {
 	float: right;
-    border-color: transparent transparent transparent #a5f3c5;
+    border-color: transparent transparent transparent #f3eca5;
 }
 
 .sent img.ok-img {
 	width: 130px; /* whatever width you change here, please change it on ".sent .message.ok" width as well*/
 	margin: 0 auto;
+}
+
+#options {
+	background-color: white;
 }

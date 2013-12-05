@@ -43,3 +43,14 @@
 	text-shadow: none;
 	border-bottom: none;
 }
+
+#jqm-footer {
+	border: none;
+	background: #ececec;
+	border-top: 1px solid #dfdfdf;
+}
+
+.footer-btn {
+	background-color: #5cbdea;
+	border-color: #2fabe4;
+}

@@ -1,5 +1,5 @@
 body, .ui-page {
-	/*background: white !important;*/
+	background: white !important;
 }
 
 .ui-content {
@@ -8,8 +8,9 @@ body, .ui-page {
 }
 
 #footer {
+	border-top: 1px solid #dfdfdf;
 	height: 45px;
-	background-color: white;
+	background-color: #ececec;
 	background-image: none;
 	color: black;
 	/*border-top: 1px solid black;*/
@@ -56,7 +57,7 @@ body, .ui-page {
 	height: 75px;
 	padding-top: 10px;
 	padding-left: 10px;
-	border-top: 1px solid #858585;
+	border-top: 1px solid #ababab;
 	text-shadow: none;
 }
 
