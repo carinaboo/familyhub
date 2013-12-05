@@ -3,43 +3,35 @@
 	background-image: none;
 	text-shadow: none;
 	border-bottom: none;
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	color: white;
+	text-align: center;
+
 }
 
-.btn {
-display: inline-block;
-padding: 6px 12px;
-margin-bottom: 0;
-font-size: 14px;
-font-weight: normal;
-line-height: 1.428571429;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-cursor: pointer;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
+#header .title {
+	text-align: center;
+	padding-top: 11px;
+	font-weight: 600;
+	display: inline-block;
 }
 
-.btn-primary {
-color: #fff;
-background-color: #428bca;
-border-color: #357ebd;
+#header .back-btn {
+	position: absolute;
+	top: 11px;
+	left: 12px;
+	font-size: 14px;
 }
 
-.btn-info {
-color: #fff;
-background-color: #5bc0de;
-border-color: #46b8da;
+#header .right-nav{
+	position: absolute;
+	top: 11px;
+	right: 12;
+	font-size: 14px;
 }
 
-.btn-success {
-color: #fff;
-background-color: #5cb85c;
-border-color: #4cae4c;
+.ui-content {
+	margin-top: 40px;
 }
