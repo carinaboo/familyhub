@@ -31,5 +31,15 @@ $(document).ready(function(){
                                            $('body > :not("#reorder_pictures")').hide();
                                            $("#reorder_pictures").show();
                                            });
+
+                  $("#voiceover_next").click(function(){
+                                           $('body > :not("#set_title_and_music")').hide();
+                                           $("#set_title_and_music").show();
+                                           });
+
+                  $("#set_title_back").click(function(){
+                                           $('body > :not("#voiceover")').hide();
+                                           $("#voiceover").show();
+                                           });
                   
                   });
