@@ -22,3 +22,14 @@ $(document).ready(function(){
                                           $("#choose_pictures").show();
                                           });
                   
+                  $("#reorder_next").click(function(){
+                                          $('body > :not("#voiceover")').hide();
+                                          $("#voiceover").show();
+                                          });
+                  
+                  $("#voiceover_back").click(function(){
+                                           $('body > :not("#reorder_pictures")').hide();
+                                           $("#reorder_pictures").show();
+                                           });
+                  
+                  });
