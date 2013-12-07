@@ -66,17 +66,19 @@
  			 <h1 id = "select_message"></br><small>Select which photos to show in your stitch</small></h1>
  			</div>
         	<div id="images">
-        		<img src = "http://placehold.it/250x250">
-        		<img src = "http://placehold.it/250x250">
+        		<img src = "http://placehold.it/250x250" class="pic">
+        		<img src = "http://placehold.it/250x250" class="pic">
         		</br>
-        		<img src = "http://placehold.it/250x250">
-        		<img src = "http://placehold.it/250x250">
+        		<img src = "http://placehold.it/250x250" class="pic">
+        		<img src = "http://placehold.it/250x250" class="pic">
         		</br>
-        		<img src = "http://placehold.it/250x250">
-        		<img src = "http://placehold.it/250x250">
+        		<img src = "http://placehold.it/250x250" class="pic">
+        		<img src = "http://placehold.it/250x250" class="pic">
         	</div>
         </div>
 	</div>
+
+
     
     <div id="reorder_pictures" data-role="page" data-add-back-btn="true" class="app">
 		<div id="header">
@@ -101,24 +103,52 @@
             </div>
         </div>
     </div>
-    
+
+
     <div id="voiceover" data-role="page" data-add-back-btn="true" class="app">
-		<div id="header">
-			<div id="voiceover_back" class="back-btn">Back </div>
-			<div class="title">Tell Your Story</div>
+        <div id="header">
+            <div id="voiceover_back" class="back-btn">Back </div>
+            <div class="title">Tell Your Story</div>
             <div id="voiceover_next" class="right-nav">Next</div>
-		</div>
+        </div>
         
         <div class="content">
-        	<div class="page-header">
+            <div class="page-header">
                 <h1 id = "select_message"></br><small>As you record, swipe for the next photo</small></h1>
- 			</div>
+            </div>
         <div id="images">
             <img src = "http://placehold.it/400x400"><br><br>
             <img src = "images/pause.png" height="50px" width="50px">
         </div>
     </div>
+
+
+
+    <div id="set_title_and_music" data-role="page" data-add-back-btn="true" class="app">
+        <div id="header">
+            <div id="set_title_back" class="back-btn">Back </div>
+            <div class="title">Set Title and Music</div>
+            <div id="set_title_next" class="right-nav">Next</div>
+        </div>
         
+        <div class="content">
+            </br>
+            </br>
+            <h4>Stitch Title:</h4>
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="Title">
+                    </div>
+            <h4>Choose Background Music:</h4>
+            <h5>Recently Used Tracks:</h5>
+            <form>
+                <input type="radio" name="song" value="first">Song1<br>
+                <input type="radio" name="song" value="second">Song2</br>
+                <input type="radio" name="song" value="third">Song3<br>
+                <input type="radio" name="song" value="fourth">Song4
+            </form>
+        </div>
+    </div>
+
     <div id="review" data-role="page" data-add-back-btn="true" class="app">
         <div id="header">
             <div id="review_back" class="back-btn">Back</div>
@@ -132,6 +162,7 @@
                 <img src = "images/play.jpg" height="75px" width="75px">
             </div>
         </div>
+    </div>
     
 </body>
 </html> 
