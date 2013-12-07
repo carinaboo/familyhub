@@ -42,4 +42,14 @@ $(document).ready(function(){
                                            $("#voiceover").show();
                                            });
                   
+                  $("#set_title_next").click(function(){
+                                             $('body > :not("#review")').hide();
+                                             $("#review").show();
+                                             });
+                  
+                  $("#review_back).click(function(){
+                                             $('body > :not("#set_title_and_music")').hide();
+                                             $("#set_title_and_music").show();
+                                             });
+                  
                   });
