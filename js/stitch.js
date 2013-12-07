@@ -47,7 +47,7 @@ $(document).ready(function(){
                                              $("#review").show();
                                              });
                   
-                  $("#review_back).click(function(){
+                  $("#review_back").click(function(){
                                              $('body > :not("#set_title_and_music")').hide();
                                              $("#set_title_and_music").show();
                                              });
