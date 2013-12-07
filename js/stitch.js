@@ -13,13 +13,13 @@ $(document).ready(function(){
                                             });
                   
                   $("#choose_next").click(function(){
-                                            $('body > :not("#choose_pictures")').hide();
+                                            $('body > :not("#reorder_pictures")').hide();
                                             $("#reorder_pictures").show();
                                             });
                   
                   $("#reorder_back").click(function(){
-                                          $('body > :not("#stitches")').hide();
-                                          $("#reorder").show();
+                                          $('body > :not("#reorder")').hide();
+                                          $("#choose_pictures").show();
                                           });
                   
                   });
