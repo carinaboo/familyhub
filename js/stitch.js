@@ -18,8 +18,7 @@ $(document).ready(function(){
                                             });
                   
                   $("#reorder_back").click(function(){
-                                          $('body > :not("#reorder")').hide();
+                                          $('body > :not("#choose_pictures")').hide();
                                           $("#choose_pictures").show();
                                           });
                   
-                  });
