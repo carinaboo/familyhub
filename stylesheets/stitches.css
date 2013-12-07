@@ -33,3 +33,11 @@ body, .ui-page {
 	margin-top: 5px;
 	display: none;
 }
+
+#images {
+	text-align: center;
+}
+
+#select_message {
+	text-align: center;
+}
