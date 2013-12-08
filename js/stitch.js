@@ -6,6 +6,7 @@ $(function() {
 $(document).ready(function(){
                   $('body > :not("#stitches")').hide();
                   $("#stitches").show();
+                  $("#toast").show();
                   
                   $("#stitches_next").click(function(){
                                        $('body > :not("#choose_pictures")').hide();
@@ -59,5 +60,6 @@ $(document).ready(function(){
                   $("#review_next").click(function(){
                                           $('body > :not("#stitches")').hide();
                                           $("#stitches").show();
+                                          $("#toast").fadeIn();
                                           });
                   });

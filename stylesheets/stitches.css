@@ -34,8 +34,15 @@ body, .ui-page {
 	display: none;
 }
 
-.row {
+#border{
     border-color:#B0B0B0;
+    border-width:1px;
+    border-style:solid;
+    padding:5px;
+}
+
+#whiteborder{
+    border-color:#FFFFFF;
     border-width:1px;
     border-style:solid;
     padding:5px;
