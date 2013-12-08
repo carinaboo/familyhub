@@ -1,3 +1,8 @@
+$(function() {
+  $( "#sortable" ).sortable();
+  $( "#sortable" ).disableSelection();
+  });
+
 $(document).ready(function(){
                   $('body > :not("#stitches")').hide();
                   $("#stitches").show();
