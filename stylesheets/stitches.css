@@ -34,8 +34,15 @@ body, .ui-page {
 	display: none;
 }
 
-.row {
+#border{
     border-color:#B0B0B0;
+    border-width:1px;
+    border-style:solid;
+    padding:5px;
+}
+
+#whiteborder{
+    border-color:#FFFFFF;
     border-width:1px;
     border-style:solid;
     padding:5px;
@@ -49,7 +56,23 @@ body, .ui-page {
 	text-align: center;
 }
 
+
 #stitch_title {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0 0 2.5em; 
+    float: center;
+    margin-right: 10px;
+}
+
+#sortable li {
+    margin: 0 5px 5px 5px; 
+    padding: 5px; 
+    font-size: 1.2em; 
+    width: 300px;
 }
