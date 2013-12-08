@@ -8,7 +8,6 @@
 	position: fixed;
 	color: white;
 	text-align: center;
-
 }
 
 #header .title {
@@ -50,7 +49,48 @@
 	border-top: 1px solid #dfdfdf;
 }
 
+.btn {
+	display: inline-block;
+	color: #FFF;
+	background-color: #5cbdea;
+	border-color: #2fabe4;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	text-decoration: none;
+}
+
 .footer-btn {
 	background-color: #5cbdea;
 	border-color: #2fabe4;
+}
+
+.panel-btn-full, .panel-btn-sm {
+	background-color: #5cbdea;
+	border-color: #2fabe4;
+}
+
+.panel-btn-full *, .panel-btn-sm * {
+	background-color: transparent;
+	border-top: 0px;
+}
+
+.panel-btn-full {
+	padding-left: 30px;
+	text-align: left;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: 15px;
+}
+
+.panel-btn-sm {
+	font-size: 13px;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	padding: 0 7px;
+	padding-top: 30px;
 }

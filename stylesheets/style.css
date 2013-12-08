@@ -89,3 +89,23 @@
 .request-actions {
 	margin: 20px auto;
 }
+
+#call-now {
+	background-image: url('../images/phone.png');
+}
+#request-call {
+	background-image: url('../images/clock.png');
+}
+#request-photo {
+	background-image: url('../images/photo.png');
+}
+
+#user-photos {
+	background-image: url('../images/photo.png');
+}
+#user-stitches {
+	background-image: url('../images/stitch.png');
+}
+#user-notes {
+	background-image: url('../images/notes.png');
+}

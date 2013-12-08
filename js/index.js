@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+	setUpUsers();
+
 	$("#ok").click(function(){
 		if ($("#message").val()) { // send a message and clear input
 			sendText( $("#message").val() );
@@ -12,7 +15,7 @@ $(document).ready(function(){
 		window.scrollTo(0,document.body.scrollHeight);
 	})
 
-	$("#name").click(function(){ // using name to swap user from Mom/Jimmy for now
+	$("#name").click(function(){ // using name to swap user from Mom/Child for demo
 		swapUser();
 	})
 
@@ -32,6 +35,7 @@ $(document).ready(function(){
 
 	$("#request-call").click(function(){
 		requestCall();
+		$( "#options-panel" ).panel( "close" );
 	})
 
 })
@@ -40,9 +44,15 @@ function requestCall() {
 	var html = "<div class='row sent callrequest'> \
 					<div class='face'></div> \
     				<div class='triangle'></div> \
-    				<div class='message'>You've requested a call</div> \
+    				<div class='message'> \
+    					<div class='text'>" + currentUser.name + " requested a call with " + otherUser.name + "</div> \
+    					<a href='#' class='schedule-call btn'>Schedule Call</a> \
+					</div> \
     			</div>"
 	$(html).hide().appendTo(".message-rows").show();
+	$(".schedule-call").click(function(){
+		$.mobile.changePage("#schedule", {transition: "slidedown"} );
+	})
 }
 
 function sendText(msg) {
@@ -76,7 +86,31 @@ function changeOkButton() {
 
 var userIsChild = true;
 
+var childName = "Jimmy";
+var childProfilePic = "images/child.jpg";
+
+var momName = "Mom";
+var momProfilePic = "images/mom.jpg";
+
+var User = function(name, pic) {
+    this.name = name,
+    this.profilePic = pic
+}
+
+var currentUser, otherUser, mom, child;
+
+function setUpUsers() {
+	mom = new User("Mom", "images/mom.jpg");
+	child = new User("Jimmy", "images/child.jpg");
+	currentUser = child;
+	otherUser = mom;
+	$('.received .face').css("background-image","url('"+otherUser.profilePic+"')");
+}
+
 function swapUser() {
+	var thisUser = currentUser;
+	currentUser = otherUser;
+	otherUser = thisUser;
 	if (userIsChild) {
 		userMom();
 		userIsChild = false;
@@ -87,7 +121,7 @@ function swapUser() {
 }
 
 function userMom() {
-	$('#name').html("Jimmy");
+	$('#name').html(childName);
 	$('.message-rows .row').each(function() {
 		if ($(this).hasClass('sent')) {
 			$(this).removeClass('sent');
@@ -97,11 +131,11 @@ function userMom() {
 			$(this).addClass('sent');
 		}
 	});
-	$('.received .face').css("background-image","url('images/child.jpg')");
+	$('.received .face').css("background-image","url('"+childProfilePic+"')");
 }
 
 function userChild() {
-	$('#name').html("Mom");
+	$('#name').html(momName);
 	$('.message-rows .row').each(function() {
 		if ($(this).hasClass('sent')) {
 			$(this).removeClass('sent');
@@ -111,5 +145,19 @@ function userChild() {
 			$(this).addClass('sent');
 		}
 	});
-	$('.received .face').css("background-image","url('images/mom.jpg')");
+	$('.received .face').css("background-image","url('"+momProfilePic+"')");
+}
+
+// Demo 1: setup user and texts for OK button demo
+function setupOkButtonDemo() {
+	userIsChild = true;
+	userChild();
+	// not done
+}
+
+// Demo 2: setup user and texts for schedule call demo
+function setupScheduleCallDemo() {
+	var userIsChild = false;
+	userMom();
+	// not done
 }
