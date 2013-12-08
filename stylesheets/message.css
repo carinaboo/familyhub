@@ -50,11 +50,14 @@ body, .ui-page, .ui-body-c {
 .received .face {
 	float: left;
 	border: 1px solid #dfdfdf;
+	background-image: url('../images/mom.jpg');
 }
 
-.face img {
-	height: 30px;
-	width: 30px;
+.face {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	background-size: 40px 40px;
 }
 
 .sent .message {

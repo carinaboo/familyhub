@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 function requestCall() {
 	var html = "<div class='row sent callrequest'> \
-					<div class='face'><img src='images/no-face.jpg'></div> \
+					<div class='face'></div> \
     				<div class='triangle'></div> \
     				<div class='message'>You've requested a call</div> \
     			</div>"
@@ -47,7 +47,7 @@ function requestCall() {
 
 function sendText(msg) {
 	var html = "<div class='row sent'> \
-					<div class='face'><img src='images/no-face.jpg'></div> \
+					<div class='face'></div> \
     				<div class='triangle'></div> \
     				<div class='message'>" + msg + "</div> \
     			</div>"
@@ -57,7 +57,7 @@ function sendText(msg) {
 function sendOk() {
 	var imgHTML = "<img class='ok-img' src='images/ok.gif'>";
 	var html = "<div class='row sent'> \
-					<div class='face'><img src='images/no-face.jpg'></div> \
+					<div class='face'></div> \
     				<div class='triangle'></div> \
     				<div class='message ok'>" + imgHTML + "</div> \
     			</div>"
@@ -97,6 +97,7 @@ function userMom() {
 			$(this).addClass('sent');
 		}
 	});
+	$('.received .face').css("background-image","url('images/child.jpg')");
 }
 
 function userChild() {
@@ -110,4 +111,5 @@ function userChild() {
 			$(this).addClass('sent');
 		}
 	});
+	$('.received .face').css("background-image","url('images/mom.jpg')");
 }
