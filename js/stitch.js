@@ -62,8 +62,15 @@ $(document).ready(function(){
                                              $("#set_title_and_music").show();
                                              });
                   $("#review_next").click(function(){
+                                          $('body > :not("#share")').hide();
+                                          $("#share").show();
+                                          });
+                  $("#share_before").click(function(){
+                                          $('body > :not("#review")').hide();
+                                          $("#review").show();
+                                          });
+                  $("#share_next").click(function(){
                                           $('body > :not("#stitches")').hide();
                                           $("#stitches").show();
-                                          $("#toast").fadeIn();
                                           });
                   });
