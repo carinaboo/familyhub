@@ -61,9 +61,15 @@ $(document).ready(function(){
                                              $('body > :not("#set_title_and_music")').hide();
                                              $("#set_title_and_music").show();
                                              });
+
                   $("#review_next").click(function(){
                                           $('body > :not("#stitches")').hide();
                                           $("#stitches").show();
                                           $("#toast").fadeIn();
                                           });
+
+                  $('#choose_pictures img').click(function() {
+                    $(this).toggleClass('highlighted');  
+                    });
+
                   });
