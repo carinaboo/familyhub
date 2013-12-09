@@ -3,345 +3,95 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/base.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/stitches.css">
-        
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/message.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/schedule.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script type="text/javascript" src="js/stitch.js"></script>
-   
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/schedule.js"></script>
 </head>
 <body>
-	<div id="stitches" data-role="page" data-add-back-btn="true" class="app">
-		<div id="header">
-			<div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-			<div class="title">Stitches</div>
-            
-		</div>
-        
-        <div data-role="content" class="custom-header-with-content">
-            <div class="container">
-                <div class="row" id="border">
-                    <div class="col-xs-9">
-                        <h3>Tahoe Vacation</h3>
-                        Created by: Jimmy<br>
-                        Uploaded: Yesterday<br>
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/play.jpg" height="75px" width="75px">
-                    </div>
-                </div>
-                <div class="row" id="border">
-                    <div class="col-xs-9">
-                        <h3>Santa Cruz Retreat</h3>
-                        Created by: Me<br>
-                        Uploaded: 10/01/13<br>
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/play.jpg" height="75px" width="75px">
-                    </div>
-                </div>
-                <div class="row" id="border">
-                    <div class="col-xs-9">
-                        <h3>High School Senior Year</h3>
-                        Created by: Samantha<br>
-                        Uploaded: 8/21/13<br>
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/play.jpg" height="75px" width="75px">
-                    </div>
-                </div>
-                
-            </div>
-            <br><br>
-            <div class='toast' style='display:none'><p>Stitch shared</p></div>
-        </div>
-        <div id="footer">
-            <div id="stitches-back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/black_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-            </div>
-            <div id="stitches_next" class="right-nav">New Stitch</div>
-        </div>
-	</div>
-    
-    <div id="choose_pictures" data-role="page" data-add-back-btn="true" class="app">
-		<div id="header">
-            <div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-			<div class="title">Choose Pictures</div>
-		</div>
+	<div data-role="page" data-add-back-btn="true" class="app" id="messages">
 		
-        <div class="content">
-        	<div class="page-header">
- 			 <h3 id = "select_message"></br><small>Select which photos to show in your stitch</small></h3>
- 			</div>
-            <div class="container">
-                <div class="row" id="whiteborder">
-                    <div class="col-xs-3">
-                        <img src="images/maui_1.jpg" height="95" width="95" class = "faded">
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/maui_2.jpg" height="95" width="95" class = "faded">
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/maui_3.jpg" height="95" width="95" class = "faded">
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/maui_4.jpg" height="95" width="95" class = "faded">
-                    </div>
-                </div>
-                <div class="row" id="whiteborder">
-                    <div class="col-xs-3">
-                        <img src="images/maui_5.jpg" height="95" width="95" class = "faded">
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/maui_6.jpg" height="95" width="95" class = "faded">
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/maui_7.jpg" height="95" width="95" class = "faded">
-                    </div>
-                    <div class="col-xs-3">
-                        <img src="images/maui_8.jpg" height="95" width="95" class = "faded">
-                    </div>
-                </div>
-            </div>
+		<!-- right panel -->
+		<div data-role="panel" id="options-panel" data-position="right" data-display="reveal" data-dismissible="true">
+			<div class="profile">
+				<div class="profile-img"></div>
+				<div class="name">Jimmy</div>
+			</div>
+			<div class="status busy">Busy: In Class</div>
+			<div class="free-at">Free at 5:30pm</div>
+			<div class="request-actions">
+				<a href="#" class="panel-btn-full" data-role="button" data-theme="a" id="call-now">Call Now</a>
+				<a href="#" class="panel-btn-full" data-role="button" data-theme="a" id="request-call">Request Call</a>
+				<a href="#" class="panel-btn-full" data-role="button" data-theme="a" id="request-photo">Request Photo</a>
+			</div>
+			<div data-role="controlgroup"  data-type="horizontal" data-mini="true">
+				<a href="#" class="panel-btn-sm" data-role="button" data-theme="a" id="user-photos">Photos</a>
+				<a href="#" class="panel-btn-sm" data-role="button" data-theme="a" id="user-stitches">Stitches</a>
+				<a href="#" class="panel-btn-sm" data-role="button" data-theme="a" id="user-notes">Notes</a>
+			</div>
+    	</div>
+		
+		<!-- main messages -->
+		<div id="jqm-header" data-role="header" data-position="fixed">
+			<h1 id="name">Mom</h1>
+			<a href="#" data-theme="b" data-icon="bars" class="ui-btn-right" data-iconpos="notext" id="options"></a>
+		</div>
+		<div id="content" data-role="content">
+        	<div class="message-rows">
+        		<div class="row received">
+        			<div class="face"></div>
+    				<div class="triangle"></div>
+    				<div class="message">Ok can't wait to see you home! :)</div>
+    			</div>
+    			<div class="row received">
+    				<div class="face"></div>
+    				<div class="triangle"></div>
+    				<div class="message">Did you get home safely? Reply back soon okay?</div>
+    			</div>
+        	</div>
+		</div>
+		<div id="jqm-footer" data-role="footer" data-position="fixed" class="actions">
+			<a href="#" class="footer-btn" data-role="button" data-iconpos="notext" data-theme="a" id="share"></a>
+			<input type="text" name="message" value="" id="message">
+			<a href="#" class="footer-btn" data-role="button" data-iconpos="notext" data-theme="a" id="ok"></a>
+		</div>
 
-        </div>
-        
-        <div id="footer">
-            <div id="choose_back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/grey_dot.png">
-                <img src="images/black_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-            </div>
-            <div id="choose_next" class="right-nav">Next</div>
-        </div>
 	</div>
 
-
-    
-    <div id="reorder_pictures" data-role="page" data-add-back-btn="true" class="app">
+	<div data-role="page" data-add-back-btn="true" class="app" id="schedule">
 		<div id="header">
-            <div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-			<div class="title">Re-order Pictures</div>
+			<div class="back-btn">Back</div>
+			<div class="title">Schedule a Call</div>
 		</div>
-		
-        <div class="content">
-        	<div class="page-header">
-                <h3 id = "select_message"></br><small>Drag and drop pictures in the order you want them to show in the stitch</small></h3>
- 			</div>
-        	<ul id="sortable">
-                <li class="ui-state-default"><img src = "images/maui_1.jpg" height="100" width="100" class="pic"></li>
-                <li class="ui-state-default"><img src = "images/maui_2.jpg" height="100" width="100" class="pic"></li>
-                <li class="ui-state-default"><img src = "images/maui_3.jpg" height="100" width="100" class="pic"></li>
-                <li class="ui-state-default"><img src = "images/maui_5.jpg" height="100" width="100" class="pic"></li>
-            </ul>
-        </div>
-        <div id="footer">
-            <div id="reorder_back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/black_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-            </div>
-            <div id="reorder_next" class="right-nav">Next</div>
-        </div>
-    </div>
-
-
-    <div id="voiceover" data-role="page" data-add-back-btn="true" class="app">
-        <div id="header">
-            <div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-            <div class="title">Tell Your Story</div>
-        </div>
-        
-        <div class="content">
-            <div class="page-header">
-                <h3 id = "select_message"></br><small>As you record, swipe for the next photo</small></h3>
-            </div>
-            <div id="images">
-                <img src="images/maui_1.jpg" height="350" width="350"><br><br>
-                <img src = "images/pause.png" height="50px" width="50px">
-            </div>
-        </div>
-        
-        <div id="footer">
-            <div id="voiceover_back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/black_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-            </div>
-            <div id="voiceover_next" class="right-nav">Next</div>
-        </div>
-    </div>
-
-
-
-    <div id="set_title_and_music" data-role="page" data-add-back-btn="true" class="app">
-        <div id="header">
-            <div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-            <div class="title">Set Background Music</div>
-            
-        </div>
-        </br>
-        </br>
-        <div class="content">
-            <div class="container">
-                <div class="song row" id = "border" class="song">
-                    <div class="col-xs-12">
-                        <h5>Gangsta's Paradise</h5>
-                    </div>
-                </div>
-                <div class="song row" id = "border">
-                    <div class="col-xs-12">
-                        <h5>Baby</h5>
-                    </div>
-                </div>
-                <div class="song row" id = "border">
-                    <div class="col-xs-12">
-                        <h5>Gangnam Style</h5>
-                    </div>
-                </div>
-                <div class="song row" id = "border">
-                    <div class="col-xs-12">
-                        <h5>Party in the U.S.A.</h5>
-                    </div>
-                </div>
-                <div class="song row" id = "border">
-                    <div class="col-xs-12">
-                        <h5>Bye Bye Bye</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="footer">
-            <div id="set_title_back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/black_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-            </div>
-            <div id="set_title_next" class="right-nav">Next</div>
-        </div>
-    </div>
-
-    <div id="review" data-role="page" data-add-back-btn="true" class="app">
-        <div id="header">
-            <div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-            <div class="title">Review Stitch</div>
-        </div>
-            
-        <div class="content">
-            </br>
-            </br>
-            </br>
-            <div id = "stitch_title" class="input-group">
-                <input type="text" class="form-control" placeholder="Untitled">
-            </div>
-            </br>
-            <div id="images">
-                <img src="images/maui_1.jpg" height="350" width="350"><br><br>
-                <img src = "images/play.jpg" height="75px" width="75px">
-            </div>
-        </div>
-        
-        <div id="footer">
-            <div id="review_back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/black_dot.png">
-                <img src="images/grey_dot.png">
-            </div>
-            <div id="review_next" class="right-nav">Share</div>
-        </div>
-    </div>
-    
-    <div id="share" data-role="page" data-add-back-btn="true" class="app">
-		<div id="header">
-            <div class="back-btn"><img src="images/logo.png" height="20px"> </div>
-			<div class="title">Share Stitch</div>
+		<div data-role="content" class="custom-header-with-content">
+			<div id="left-col"> 
+				<div class="time">11am</div>
+				<div class="time">12pm</div>
+				<div class="time">1pm</div>
+				<div class="time">2pm</div>
+				<div class="time">3pm</div>
+				<div class="time">4pm</div>
+			</div>
+			<div id="right-col">
+				<div class="item taken">CS160 Lecture</div>
+				<div class="item taken">Lunch with John</div>
+				<div class="item"></div>
+				<div class="item trigger">
+				</div>
+				<div class="item"></div>
+				<div class="item taken">Study</div>
+			</div>
+			<div id="footer">
+				<div class="note">Pick a time to speak.</div>
+				<div class="call"><div class="btn btn-info" id="schedule-time">Schedule Call</div></div>
+			</div>
 		</div>
-        
-        <div data-role="content" class="custom-header-with-content">
-            <div class="container">
-                
-                <div class="row family" id="border">
-                    <div class="col-xs-3">
-                        <img src="images/brother.jpg" height="75px" width="75px" class="img-circle">
-                        
-                    </div>
-                    <div class="col-xs-9">
-                        <h3>Johnny</h3>
-                    </div>
-                </div>
-                <div class="row family" id="border">
-                    <div class="col-xs-3">
-                        <img src="images/mom.jpg" height="75px" width="75px" class="img-circle">
-                            
-                            </div>
-                    <div class="col-xs-9">
-                        <h3>Mom</h3>
-                    </div>
-                </div>
-                <div class="row family" id="border">
-                    <div class="col-xs-3">
-                        <img src="images/dad.jpg" height="75px" width="75px" class="img-circle">
-                    </div>
-                    <div class="col-xs-9">
-                        <h3>Dad</h3>
-                    </div>
-                </div>
-                </div>
-            </div>
-        
-        <div id="footer">
-            <div id="share_back" class="back-btn">Back </div>
-            <div class="title">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                <img src="images/grey_dot.png">
-                
-                <img src="images/grey_dot.png">
-                <img src="images/black_dot.png">
-            </div>
-            <div id="share_next" class="right-nav">Share</div>
-        </div>
-    </div>
-    
+	</div>
+
 </body>
 </html> 
-
