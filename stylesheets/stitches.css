@@ -96,6 +96,10 @@ img.highlighted {
 	background-color: #D0D0D0;
 }
 
+.family_selected {
+	background-color: #D0D0D0;
+}
+
 .toast {
     background-color: #333333;
     color: #e0e0e0;

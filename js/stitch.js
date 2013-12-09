@@ -87,4 +87,8 @@ $(document).ready(function(){
                     $(this).addClass('selected_song');
                     });
 
+                  $('.family').click(function() {
+                    $(this).toggleClass('family_selected');
+                    });
+
                   });
