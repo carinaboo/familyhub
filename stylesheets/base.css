@@ -38,6 +38,15 @@
 	font-size: 14px;
 }
 
+#footer .title {
+    position: absolute;
+	text-align: center;
+	padding-top: 11px;
+	font-weight: 600;
+	display: inline-block;
+    left: 150px;
+}
+
 #footer .right-nav{
 	position: absolute;
 	top: 11px;
