@@ -63,6 +63,7 @@ $(document).ready(function(){
                                              $('body > :not("#set_title_and_music")').hide();
                                              $("#set_title_and_music").show();
                                              });
+
                   $("#review_next").click(function(){
                                           $('body > :not("#share")').hide();
                                           $("#share").show();
@@ -76,4 +77,9 @@ $(document).ready(function(){
                                           $("#stitches").show();
                                           $('.toast').fadeIn(400).delay(3000).fadeOut(400);
                                           });
+
+                  $('#choose_pictures img').click(function() {
+                    $(this).toggleClass('highlighted');  
+                    });
+
                   });
