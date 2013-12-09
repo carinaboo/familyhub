@@ -89,3 +89,7 @@ img.highlighted {
 	opacity: 1;
     border: 3px solid black;
 }
+
+.selected_song {
+	background-color: #D0D0D0;
+}
