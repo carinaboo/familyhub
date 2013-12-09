@@ -7,6 +7,8 @@ $(function() {
                         });
   });
 
+
+
 $(document).ready(function(){
                   $('body > :not("#stitches")').hide();
                   $("#stitches").show();
@@ -72,5 +74,6 @@ $(document).ready(function(){
                   $("#share_next").click(function(){
                                           $('body > :not("#stitches")').hide();
                                           $("#stitches").show();
+                                          $('.toast').fadeIn(400).delay(3000).fadeOut(400);
                                           });
                   });

@@ -80,3 +80,16 @@ body, .ui-page {
 img.highlighted {
     border: 2px solid blue;
 }
+
+.toast {
+    background-color: #333333;
+    color: #e0e0e0;
+    position: fixed;
+    padding: 4px;
+    text-align: center;
+    margin-left: 100px;
+    width: 200px;
+
+    left: ($(window).width() - 284)/2;
+    top: $(window).height()/2;
+}
