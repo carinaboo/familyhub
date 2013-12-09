@@ -37,6 +37,8 @@
 	margin-right: 2px;
 	background-color: rgb(92, 189, 234);
 	border: 1px solid #2fabe4;
+	color: white;
+	font-weight: normal;
 }
 
 .member {
@@ -75,6 +77,8 @@
 	font-size: 22px;
 	position: absolute;
 	bottom: 0;
+	color: #333;
+	font-weight: normal;
 }
 
 .member-status {
