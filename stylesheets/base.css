@@ -31,6 +31,20 @@
 	font-size: 14px;
 }
 
+#footer .back-btn {
+	position: absolute;
+	top: 11px;
+	left: 12px;
+	font-size: 14px;
+}
+
+#footer .right-nav{
+	position: absolute;
+	top: 11px;
+	right: 12;
+	font-size: 14px;
+}
+
 .custom-header-with-content {
 	margin-top: 40px;
 }
