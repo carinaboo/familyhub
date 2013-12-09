@@ -92,8 +92,7 @@ img.highlighted {
 }
 
 .toast {
-    background-color: #333333;
-    color: #e0e0e0;
+    background-color: #d0d0d0;
     position: fixed;
     padding: 4px;
     text-align: center;
