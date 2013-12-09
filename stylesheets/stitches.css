@@ -84,12 +84,26 @@ body, .ui-page {
 }
 
 img.highlighted {
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    border: 2px solid blue;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
 	-moz-opacity: 1;
 	opacity: 1;
     border: 3px solid black;
 }
 
+
 .selected_song {
 	background-color: #D0D0D0;
+}
+
+.toast {
+    background-color: #333333;
+    color: #e0e0e0;
+    position: fixed;
+    padding: 4px;
+    text-align: center;
+    margin-left: 100px;
+    width: 200px;
+    left: ($(window).width() - 284)/2;
+    top: $(window).height()/2;
 }
