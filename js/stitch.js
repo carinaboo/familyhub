@@ -68,7 +68,7 @@ $(document).ready(function(){
                                           $('body > :not("#share")').hide();
                                           $("#share").show();
                                           });
-                  $("#share_before").click(function(){
+                  $("#share_back").click(function(){
                                           $('body > :not("#review")').hide();
                                           $("#review").show();
                                           });
