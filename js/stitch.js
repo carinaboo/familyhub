@@ -82,4 +82,9 @@ $(document).ready(function(){
                     $(this).toggleClass('highlighted');  
                     });
 
+                  $('.song').click(function() {
+                    $('.song').removeClass('selected_song');
+                    $(this).addClass('selected_song');
+                    });
+
                   });
