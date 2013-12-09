@@ -76,3 +76,7 @@ body, .ui-page {
     font-size: 1.2em; 
     width: 300px;
 }
+
+img.highlighted {
+    border: 2px solid blue;
+}
