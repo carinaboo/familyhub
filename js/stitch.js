@@ -63,9 +63,16 @@ $(document).ready(function(){
                                              });
 
                   $("#review_next").click(function(){
+                                          $('body > :not("#share")').hide();
+                                          $("#share").show();
+                                          });
+                  $("#share_before").click(function(){
+                                          $('body > :not("#review")').hide();
+                                          $("#review").show();
+                                          });
+                  $("#share_next").click(function(){
                                           $('body > :not("#stitches")').hide();
                                           $("#stitches").show();
-                                          $("#toast").fadeIn();
                                           });
 
                   $('#choose_pictures img').click(function() {
