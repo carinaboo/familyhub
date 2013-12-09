@@ -1,0 +1,100 @@
+.self-info {
+	height: 100px;
+}
+
+.self-photo {
+	float: left;
+}
+
+.self-photo img {
+	height: 100px;
+	width: 100px;
+	border-radius: 80px;
+}
+
+.self-name {
+	float: left;
+	line-height: 100px;
+	padding-left: 25px;
+	font-size: 22px;
+}
+
+.buttons {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+	text-shadow: none;
+	color: white;
+}
+
+.self-button {
+	width: 25%;
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 2px;
+	margin-right: 2px;
+	background-color: rgb(92, 189, 234);
+	border: 1px solid #2fabe4;
+	color: white;
+	font-weight: normal;
+}
+
+.member {
+	height: 100px;
+	border-bottom: 1px solid rgb(223, 223, 223);
+	background-color: white;
+}
+
+.member-photo {
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+
+.member-photo img {
+	height: 100px;
+	width: 100px;
+}
+
+.member-info {
+	height: 100px;
+	float: left;
+}
+
+.member-info {
+	height: 50px;
+	padding-left: 25px;
+}
+
+.member-name {
+	height: 50px;
+	position: relative;
+}
+
+.member-name span{
+	font-size: 22px;
+	position: absolute;
+	bottom: 0;
+	color: #333;
+	font-weight: normal;
+}
+
+.member-status {
+	height: 50px;
+	color: #f00;
+	padding-top: 5px;
+}
+
+.member-status.green {
+	color: #00cc00;
+}
+
+.family-label {
+	text-align: center;
+	background-color: #292929;
+	color: white;
+	text-shadow: none;
+	line-height: 35px;
+}

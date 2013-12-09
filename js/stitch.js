@@ -82,4 +82,13 @@ $(document).ready(function(){
                     $(this).toggleClass('highlighted');  
                     });
 
+                  $('.song').click(function() {
+                    $('.song').removeClass('selected_song');
+                    $(this).addClass('selected_song');
+                    });
+
+                  $('.family').click(function() {
+                    $(this).toggleClass('family_selected');
+                    });
+
                   });

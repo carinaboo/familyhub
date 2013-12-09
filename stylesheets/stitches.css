@@ -91,6 +91,15 @@ img.highlighted {
     border: 3px solid black;
 }
 
+
+.selected_song {
+	background-color: #D0D0D0;
+}
+
+.family_selected {
+	background-color: #D0D0D0;
+}
+
 .toast {
     background-color: #d0d0d0;
     position: fixed;
@@ -98,7 +107,6 @@ img.highlighted {
     text-align: center;
     margin-left: 100px;
     width: 200px;
-
     left: ($(window).width() - 284)/2;
     top: $(window).height()/2;
 }
