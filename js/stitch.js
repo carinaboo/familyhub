@@ -1,6 +1,10 @@
 $(function() {
   $( "#sortable" ).sortable();
   $( "#sortable" ).disableSelection();
+  
+  $( "#sortable" ).bind( "sortstop", function(event, ui) {
+                        $('#sortable').listview('refresh');
+                        });
   });
 
 $(document).ready(function(){
