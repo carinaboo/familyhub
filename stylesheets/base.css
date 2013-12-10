@@ -11,7 +11,7 @@
 }
 
 #header .title {
-	position: absolute;
+	/*position: absolute;*/
 	text-align: center;
 	padding-top: 11px;
 	font-weight: 600;
@@ -30,6 +30,11 @@
 	top: 11px;
 	right: 12px;
 	font-size: 14px;
+}
+
+#home {
+	color: white;
+	font-weight: normal;
 }
 
 #footer .back-btn {
@@ -70,8 +75,9 @@
 #jqm-header #home {
 	position: absolute;
 	font-weight: normal;
-	left: 5px;
+	left: 10px;
 	top: 11px;
+	font-size: 14px;
 }
 
 #jqm-header #options {

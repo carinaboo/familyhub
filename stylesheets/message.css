@@ -83,6 +83,7 @@ body, .ui-page, .ui-body-c {
 #options {
 	position: absolute;
 	font-weight: normal;
-	right: 5px;
+	right: 10px;
 	top: 11px;
+	font-size: 14px;
 }
