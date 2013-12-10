@@ -15,7 +15,7 @@ $(document).ready(function(){
 		window.scrollTo(0,document.body.scrollHeight);
 	})
 
-	$("#name").click(function(){ // using name to swap user from Mom/Child for demo
+	$(".name-other").click(function(){ // using name to swap user from Mom/Child for demo
 		swapUser();
 	})
 
@@ -47,6 +47,7 @@ function requestCall() {
     				<div class='message'> \
     					<div class='text'>" + currentUser.name + " requested a call with " + otherUser.name + "</div> \
     					<a href='#' class='schedule-call btn'>Schedule Call</a> \
+    					<a href='#' class='call-now btn'>Call Now</a> \
 					</div> \
     			</div>"
 	$(html).hide().appendTo(".message-rows").show();
@@ -121,7 +122,7 @@ function swapUser() {
 }
 
 function userMom() {
-	$('#name').html(childName);
+	$('.name-other').html(childName);
 	$('.message-rows .row').each(function() {
 		if ($(this).hasClass('sent')) {
 			$(this).removeClass('sent');
@@ -132,10 +133,11 @@ function userMom() {
 		}
 	});
 	$('.received .face').css("background-image","url('"+childProfilePic+"')");
+	$('.profile-img').css("background-image","url('"+childProfilePic+"')");
 }
 
 function userChild() {
-	$('#name').html(momName);
+	$('.name-other').html(momName);
 	$('.message-rows .row').each(function() {
 		if ($(this).hasClass('sent')) {
 			$(this).removeClass('sent');
@@ -146,6 +148,7 @@ function userChild() {
 		}
 	});
 	$('.received .face').css("background-image","url('"+momProfilePic+"')");
+	$('.profile-img').css("background-image","url('"+momProfilePic+"')");
 }
 
 // Demo 1: setup user and texts for OK button demo
