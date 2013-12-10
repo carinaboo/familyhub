@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	setUpUsers();
+	setupOkButtonDemo();
 
 	$("#ok").click(function(){
 		if ($("#message").val()) { // send a message and clear input
@@ -38,7 +39,15 @@ $(document).ready(function(){
 		$( "#options-panel" ).panel( "close" );
 	})
 
+	$("#share").click(function(){
+		clearMessages();
+	})
+
 })
+
+function clearMessages() {
+	$('.message-rows').empty();
+}
 
 function requestCall() {
 	var html = "<div class='row sent callrequest'> \
@@ -58,6 +67,15 @@ function requestCall() {
 
 function sendText(msg) {
 	var html = "<div class='row sent'> \
+					<div class='face'></div> \
+    				<div class='triangle'></div> \
+    				<div class='message'>" + msg + "</div> \
+    			</div>"
+	$(html).hide().appendTo(".message-rows").show();
+}
+
+function receiveText(msg) {
+	var html = "<div class='row received'> \
 					<div class='face'></div> \
     				<div class='triangle'></div> \
     				<div class='message'>" + msg + "</div> \
@@ -155,6 +173,10 @@ function userChild() {
 function setupOkButtonDemo() {
 	userIsChild = true;
 	userChild();
+	currentUser = child;
+	otherUser = mom;
+	// receiveText("Did you get home safely? Reply back soon okay?");
+	// $('.received .face').css("background-image","url('"+momProfilePic+"')");
 	// not done
 }
 
