@@ -19,7 +19,7 @@
 }
 
 #jqm-footer.actions #message {
-	width: 230px;
+	width: 220px; /*240 for Nexus*/
 }
 
 #jqm-footer.actions #ok {
