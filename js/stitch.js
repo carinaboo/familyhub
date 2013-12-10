@@ -1,4 +1,23 @@
 var record = true;
+var pictures = new Array();
+pictures[0] = 'url("images/maui_2.jpg")';
+pictures[1] = 'url("images/maui_3.jpg")';
+pictures[2] = 'url("images/maui_4.jpg")';
+pictures[3] = 'url("images/maui_1.jpg")';
+var index = 0;
+
+/*$(function(){
+  // Bind the swipeHandler callback function to the swipe event on div.box
+  $( "#slideshow" ).on( "swipe", swipeHandler );
+  
+  // Callback function references the event target and adds the 'swipe' class to it
+  function swipeHandler( event ){
+    while (index < 4){
+        $(#slideshow).css('background-image', pictures[index]);
+        index++;
+    }
+  }
+});*/
 
 $(function() {
   $( "#sortable" ).sortable();
@@ -102,6 +121,4 @@ $(document).ready(function(){
                                         record = true;
                                      }
                                 });
-                  
-
                   });
