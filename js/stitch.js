@@ -1,3 +1,5 @@
+var record = true;
+
 $(function() {
   $( "#sortable" ).sortable();
   $( "#sortable" ).disableSelection();
@@ -90,5 +92,16 @@ $(document).ready(function(){
                   $('.family').click(function() {
                     $(this).toggleClass('family_selected');
                     });
+                  
+                  $('#record').click(function() {
+                                     if (record == true) {
+                                        $('#record').css('background-image', 'url("images/pause.png")');
+                                        record = false;
+                                     } else {
+                                        $('#record').css('background-image', 'url("images/record.png")');
+                                        record = true;
+                                     }
+                                });
+                  
 
                   });
