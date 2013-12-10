@@ -1,9 +1,11 @@
 .self-info {
-	height: 100px;
+	height: 120px;
 }
 
 .self-photo {
 	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
 .self-photo img {

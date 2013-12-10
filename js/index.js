@@ -4,6 +4,7 @@ $(document).ready(function(){
 	})
 
 	setUpUsers();
+	setupOkButtonDemo();
 
 	$("#ok").click(function(){
 		if ($("#message").val()) { // send a message and clear input
@@ -18,7 +19,7 @@ $(document).ready(function(){
 		window.scrollTo(0,document.body.scrollHeight);
 	})
 
-	$("#name").click(function(){ // using name to swap user from Mom/Child for demo
+	$(".name-other").click(function(){ // using name to swap user from Mom/Child for demo
 		swapUser();
 	})
 
@@ -41,7 +42,15 @@ $(document).ready(function(){
 		$( "#options-panel" ).panel( "close" );
 	})
 
+	$("#share").click(function(){
+		clearMessages();
+	})
+
 })
+
+function clearMessages() {
+	$('.message-rows').empty();
+}
 
 function requestCall() {
 	var html = "<div class='row sent callrequest'> \
@@ -50,6 +59,7 @@ function requestCall() {
     				<div class='message'> \
     					<div class='text'>" + currentUser.name + " requested a call with " + otherUser.name + "</div> \
     					<a href='#' class='schedule-call btn'>Schedule Call</a> \
+    					<a href='#' class='call-now btn'>Call Now</a> \
 					</div> \
     			</div>"
 	$(html).hide().appendTo(".message-rows").show();
@@ -60,6 +70,15 @@ function requestCall() {
 
 function sendText(msg) {
 	var html = "<div class='row sent'> \
+					<div class='face'></div> \
+    				<div class='triangle'></div> \
+    				<div class='message'>" + msg + "</div> \
+    			</div>"
+	$(html).hide().appendTo(".message-rows").show();
+}
+
+function receiveText(msg) {
+	var html = "<div class='row received'> \
 					<div class='face'></div> \
     				<div class='triangle'></div> \
     				<div class='message'>" + msg + "</div> \
@@ -124,7 +143,7 @@ function swapUser() {
 }
 
 function userMom() {
-	$('#name').html(childName);
+	$('.name-other').html(childName);
 	$('.message-rows .row').each(function() {
 		if ($(this).hasClass('sent')) {
 			$(this).removeClass('sent');
@@ -135,10 +154,11 @@ function userMom() {
 		}
 	});
 	$('.received .face').css("background-image","url('"+childProfilePic+"')");
+	$('.profile-img').css("background-image","url('"+childProfilePic+"')");
 }
 
 function userChild() {
-	$('#name').html(momName);
+	$('.name-other').html(momName);
 	$('.message-rows .row').each(function() {
 		if ($(this).hasClass('sent')) {
 			$(this).removeClass('sent');
@@ -149,12 +169,17 @@ function userChild() {
 		}
 	});
 	$('.received .face').css("background-image","url('"+momProfilePic+"')");
+	$('.profile-img').css("background-image","url('"+momProfilePic+"')");
 }
 
 // Demo 1: setup user and texts for OK button demo
 function setupOkButtonDemo() {
 	userIsChild = true;
 	userChild();
+	currentUser = child;
+	otherUser = mom;
+	// receiveText("Did you get home safely? Reply back soon okay?");
+	// $('.received .face').css("background-image","url('"+momProfilePic+"')");
 	// not done
 }
 
