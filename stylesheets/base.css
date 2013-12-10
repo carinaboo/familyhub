@@ -68,6 +68,13 @@
 	border-bottom: none;
 }
 
+#jqm-header #home {
+	position: absolute;
+	font-weight: normal;
+	left: 5px;
+	top: 11px;
+}
+
 #jqm-footer {
 	border: none;
 	background: #ececec;
