@@ -26,6 +26,7 @@ body, .ui-page {
 	width: 100%;
 }
 
+
 #footer .note {
 	float: left;
 	margin-top: 15px;
@@ -134,4 +135,15 @@ img.highlighted {
     width: 200px;
     left: ($(window).width() - 284)/2;
     top: $(window).height()/2;
+}
+
+.pic-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+}
+
+.choose-pic {
+    display: inline-block;
+    padding-bottom: 20px;
 }

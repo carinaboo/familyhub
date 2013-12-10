@@ -45,7 +45,7 @@
 }
 
 #footer .title {
-    position: absolute;
+	width: 100%;
 	text-align: center;
 	padding-top: 11px;
 	font-weight: 600;
