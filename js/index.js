@@ -43,6 +43,10 @@ $(document).ready(function(){
 	})
 
 	$("#share").click(function(){
+		sendText("Did you get home safely? Reply back soon okay?");
+	})
+
+	$("#request-photo").click(function(){
 		clearMessages();
 	})
 
