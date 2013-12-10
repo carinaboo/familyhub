@@ -16,7 +16,6 @@
 	padding-top: 11px;
 	font-weight: 600;
 	display: inline-block;
-	right: 5px;
 }
 
 #header .back-btn {
@@ -29,7 +28,7 @@
 #header .right-nav{
 	position: absolute;
 	top: 11px;
-	right: 12;
+	right: 12px;
 	font-size: 14px;
 }
 
@@ -46,7 +45,7 @@
 	padding-top: 11px;
 	font-weight: 600;
 	display: inline-block;
-    left: 150px;
+    right: 150px;
 }
 
 #footer .right-nav{
