@@ -81,5 +81,8 @@ body, .ui-page, .ui-body-c {
 }
 
 #options {
-	background-color: white;
+	position: absolute;
+	font-weight: normal;
+	right: 5px;
+	top: 11px;
 }
