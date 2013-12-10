@@ -11,12 +11,11 @@
 }
 
 #header .title {
-	position: absolute;
+	/*position: absolute;*/
 	text-align: center;
 	padding-top: 11px;
 	font-weight: 600;
 	display: inline-block;
-	right: 5px;
 }
 
 #header .back-btn {
@@ -29,8 +28,13 @@
 #header .right-nav{
 	position: absolute;
 	top: 11px;
-	right: 12;
+	right: 12px;
 	font-size: 14px;
+}
+
+#home {
+	color: white;
+	font-weight: normal;
 }
 
 #footer .back-btn {
@@ -46,7 +50,7 @@
 	padding-top: 11px;
 	font-weight: 600;
 	display: inline-block;
-    left: 150px;
+    right: 150px;
 }
 
 #footer .right-nav{
@@ -66,6 +70,18 @@
 	background-image: none;
 	text-shadow: none;
 	border-bottom: none;
+}
+
+#jqm-header #home {
+	position: absolute;
+	font-weight: normal;
+	left: 10px;
+	top: 11px;
+	font-size: 14px;
+}
+
+#jqm-header #options {
+
 }
 
 #jqm-footer {
