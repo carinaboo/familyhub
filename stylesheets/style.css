@@ -1,14 +1,14 @@
-.actions {
+#jqm-footer.actions {
 	width: 100%;
 	height: 50px;
 }
 
-.actions > * {
+#jqm-footer.actions > * {
 	height: 68%;
 	float: left;
 }
 
-.actions #share {
+#jqm-footer.actions #share {
 	width: 45px;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -18,11 +18,11 @@
 	background-position:center;
 }
 
-.actions #message {
+#jqm-footer.actions #message {
 	width: 240px;
 }
 
-.actions #ok {
+#jqm-footer.actions #ok {
 	float: right;
 	width: 45px;
 	margin-left: 5px;
@@ -33,7 +33,7 @@
 	background-position:center;
 }
 
-.actions .ui-input-text {
+#jqm-footer.actions .ui-input-text {
 	background-color: #f7f7f7;
 	border-color: #dedede;
 	-webkit-box-shadow: none;
@@ -46,6 +46,10 @@
 
 
 /* Right Panel */
+
+#options-panel {
+	background: #F9F9F9
+}
 
 .profile {
 	overflow: hidden;

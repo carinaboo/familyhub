@@ -11,8 +11,4 @@ $(document).ready(function(){
 	// 	$.mobile.changePage("#messages", {transition: "slidedown"});
 	// })
 
-	$("#schedule-time").click(function(){
-		$.mobile.changePage("#messages", {transition: "slidedown", reverse: true});
-	})
-
 })

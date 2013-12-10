@@ -21,7 +21,7 @@ body, .ui-page, .ui-body-c {
 	max-width: 70%;
 	margin-bottom: 20px;
 	text-shadow: none;
-	font-size: 12px;
+	font-size: 14px;
 	padding: 10px;
 	border-radius: 5px;
 }
@@ -60,24 +60,72 @@ body, .ui-page, .ui-body-c {
 	background-size: 40px 40px;
 }
 
-.sent .message {
-	background-color: #f3eca5;
-	float: right;
-}
-
-.sent .message.ok {
-	width: 130px; /* whatever width you change here, please change it on ".sent img.ok-img" width as well*/
-	height: 130px;
-}
-
 .sent .triangle {
 	float: right;
     border-color: transparent transparent transparent #f3eca5;
 }
 
+.sent .message {
+	background-color: #f3eca5;
+	float: right;
+}
+
+ /* ok button */
+
+.sent .message.ok {
+	width: 130px;
+	height: 130px;
+}
+
+.received .message.ok {
+	width: 160px;
+	height: 160px;
+}
+
 .sent img.ok-img {
-	width: 130px; /* whatever width you change here, please change it on ".sent .message.ok" width as well*/
+	width: 100%; 
 	margin: 0 auto;
+}
+
+.received img.ok-img {
+	width: 100%; 
+	margin: 0 auto;
+}
+
+/* request call */
+
+.message.callrequest .schedule-call {
+	background-color: #5CBDEA;
+	border-color: #2FABE4;
+}
+
+.message.callrequest .call-now {
+	background-color: #5CBDEA;
+	border-color: #2FABE4;
+}
+
+.sent .message .actions {
+	display: none;
+}
+
+.received .message .actions {
+	display: block;
+	margin-top: 10px;
+}
+
+.received .message .actions .btn {
+	margin-right: 3px;
+}
+
+.message .response {
+	display: block;
+	margin-top: 5px;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.message .title {
+	font-weight: bold;
 }
 
 #options {

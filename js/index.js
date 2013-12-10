@@ -42,6 +42,13 @@ $(document).ready(function(){
 		$( "#options-panel" ).panel( "close" );
 	})
 
+	$("#schedule-time").click(function(){
+		$.mobile.changePage("#messages", {transition: "slidedown", reverse: true});
+		scheduleCall("2:00pm");
+	})
+
+	/* buttons used for demo */
+
 	$("#share").click(function(){
 		sendText("Did you get home safely? Reply back soon okay?");
 	})
@@ -52,24 +59,67 @@ $(document).ready(function(){
 
 })
 
+function toast(message) {
+	var html = "<div class='toast'>" + message + "</div>";
+	$(html).hide().appendTo('#content');
+	$('.toast').fadeIn(400).delay(2500).fadeOut(400);
+}
+
 function clearMessages() {
 	$('.message-rows').empty();
 }
 
 function requestCall() {
-	var html = "<div class='row sent callrequest'> \
+	var html = "<div class='row sent'> \
 					<div class='face'></div> \
     				<div class='triangle'></div> \
-    				<div class='message'> \
+    				<div class='message callrequest'> \
     					<div class='text'>" + currentUser.name + " requested a call with " + otherUser.name + "</div> \
-    					<a href='#' class='schedule-call btn'>Schedule Call</a> \
-    					<a href='#' class='call-now btn'>Call Now</a> \
+    					<div class='actions'> \
+	    					<a href='#' class='schedule-call btn'>Schedule Call</a> \
+	    					<a href='#' class='call-now btn'>Call Now</a> \
+    					</div> \
 					</div> \
     			</div>"
 	$(html).hide().appendTo(".message-rows").show();
 	$(".schedule-call").click(function(){
 		$.mobile.changePage("#schedule", {transition: "slidedown"} );
 	})
+}
+
+function scheduleCall(time) {
+	$('.callrequest .actions').hide();
+	var html = "<div class='row sent'> \
+					<div class='face'></div> \
+    				<div class='triangle'></div> \
+    				<div class='message calltime'> \
+    					<div class='text'>" + currentUser.name + " proposed calling at " + time + "</div> \
+    					<div class='actions'> \
+	    					<a href='#' class='accept-time btn'>Accept</a> \
+	    					<a href='#' class='deny-time btn'>Deny</a> \
+    					</div> \
+    					<div class='response'> \
+    					</div> \
+					</div> \
+    			</div>"
+	$(html).hide().appendTo(".message-rows").show();
+	$(".accept-time").click(function(){
+		$(this).parent().hide();
+		$(this).parent().siblings('.response').html("<span class='accepted'>Accepted</span>");
+		accpetCall(time);
+		toast("Reminder added to call Jimmy at 2:00pm");
+	})
+}
+
+function accpetCall(time) {
+	var html = "<div class='row sent'> \
+					<div class='face'></div> \
+    				<div class='triangle'></div> \
+    				<div class='message callrequest'> \
+    					<div class='text'>" + currentUser.name + " will call " + otherUser.name + " at " + time + "</div> \
+					</div> \
+    			</div>"
+	$(html).hide().appendTo(".message-rows").show();
 }
 
 function sendText(msg) {
